@@ -14,11 +14,13 @@ func main() {
     log.Fatal(err)
   }
 
-  names := make(map[string]int)
+  votes := make(map[string]int)
   for _, name := range lines {
-    names[name]++
+    votes[name]++
   }
 
-  fmt.Println(names)
+  for name, count := range votes {
+    fmt.Printf("Votes for %s: %d\n", name, count)
+  }
 
 }
