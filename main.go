@@ -14,5 +14,11 @@ func main() {
     log.Fatal(err)
   }
 
-  fmt.Println(lines)
+  names := make(map[string]int)
+  for _, name := range lines {
+    names[name]++
+  }
+
+  fmt.Println(names)
+
 }
